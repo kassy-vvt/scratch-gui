@@ -1,7 +1,7 @@
 var GUI =
 webpackJsonpGUI([0],{
 
-/***/ 145:
+/***/ 154:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9,7 +9,7 @@ webpackJsonpGUI([0],{
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 
-__webpack_require__(146);
+__webpack_require__(155);
 
 var _react = __webpack_require__(0);
 
@@ -27,21 +27,21 @@ var _analytics = __webpack_require__(10);
 
 var _analytics2 = _interopRequireDefault(_analytics);
 
-var _gui = __webpack_require__(22);
+var _gui = __webpack_require__(24);
 
 var _gui2 = _interopRequireDefault(_gui);
 
-var _errorBoundaryHoc = __webpack_require__(544);
+var _errorBoundaryHoc = __webpack_require__(552);
 
 var _errorBoundaryHoc2 = _interopRequireDefault(_errorBoundaryHoc);
 
-var _index = __webpack_require__(550);
+var _index = __webpack_require__(558);
 
 var _index2 = _interopRequireDefault(_index);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-if ("production" === 'production' && (typeof window === 'undefined' ? 'undefined' : _typeof(window)) === 'object') {
+if (false) {
     // Warn before navigating away
     window.onbeforeunload = function () {
         return true;
@@ -63,18 +63,18 @@ _reactDom2.default.render(_react2.default.createElement(App, null), appTarget);
 
 /***/ }),
 
-/***/ 146:
+/***/ 155:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-__webpack_require__(147).polyfill();
+__webpack_require__(156).polyfill();
 
 
 /***/ }),
 
-/***/ 147:
+/***/ 156:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -128,7 +128,7 @@ module.exports = {
 
 /***/ }),
 
-/***/ 544:
+/***/ 552:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -142,7 +142,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _errorBoundary = __webpack_require__(545);
+var _errorBoundary = __webpack_require__(553);
 
 var _errorBoundary2 = _interopRequireDefault(_errorBoundary);
 
@@ -168,7 +168,7 @@ exports.default = ErrorBoundaryHOC;
 
 /***/ }),
 
-/***/ 545:
+/***/ 553:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -188,19 +188,19 @@ var _propTypes = __webpack_require__(1);
 
 var _propTypes2 = _interopRequireDefault(_propTypes);
 
-var _platform = __webpack_require__(51);
+var _platform = __webpack_require__(54);
 
 var _platform2 = _interopRequireDefault(_platform);
 
-var _browserModal = __webpack_require__(132);
+var _browserModal = __webpack_require__(137);
 
 var _browserModal2 = _interopRequireDefault(_browserModal);
 
-var _crashMessage = __webpack_require__(546);
+var _crashMessage = __webpack_require__(554);
 
 var _crashMessage2 = _interopRequireDefault(_crashMessage);
 
-var _log = __webpack_require__(20);
+var _log = __webpack_require__(17);
 
 var _log2 = _interopRequireDefault(_log);
 
@@ -277,7 +277,7 @@ exports.default = ErrorBoundary;
 
 /***/ }),
 
-/***/ 546:
+/***/ 554:
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -295,15 +295,17 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _box = __webpack_require__(7);
+var _box = __webpack_require__(8);
 
 var _box2 = _interopRequireDefault(_box);
 
-var _crashMessage = __webpack_require__(547);
+var _reactIntl = __webpack_require__(6);
+
+var _crashMessage = __webpack_require__(555);
 
 var _crashMessage2 = _interopRequireDefault(_crashMessage);
 
-var _reload = __webpack_require__(549);
+var _reload = __webpack_require__(557);
 
 var _reload2 = _interopRequireDefault(_reload);
 
@@ -323,12 +325,20 @@ var CrashMessage = function CrashMessage(props) {
             _react2.default.createElement(
                 'h2',
                 null,
-                'Oops! Something went wrong.'
+                _react2.default.createElement(_reactIntl.FormattedMessage, {
+                    defaultMessage: 'Oops! Something went wrong.',
+
+                    id: 'gui.crashMessage.title'
+                })
             ),
             _react2.default.createElement(
                 'p',
                 null,
-                'We are so sorry, but it looks like Scratch has crashed. This bug has been automatically reported to the Scratch Team. Please refresh your page to try again.'
+                _react2.default.createElement(_reactIntl.FormattedMessage, {
+                    defaultMessage: 'We are so sorry, but it looks like Scratch has crashed. This bug has been automatically reported to the Scratch Team. Please refresh your page to try again.',
+
+                    id: 'gui.crashMessage.description'
+                })
             ),
             _react2.default.createElement(
                 'button',
@@ -350,11 +360,11 @@ exports.default = CrashMessage;
 
 /***/ }),
 
-/***/ 547:
+/***/ 555:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(548);
+var content = __webpack_require__(556);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -401,7 +411,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 548:
+/***/ 556:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -421,18 +431,18 @@ exports.locals = {
 
 /***/ }),
 
-/***/ 549:
+/***/ 557:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "static/assets/dd98971c2c185caf86144b6b5234d0fa.svg";
 
 /***/ }),
 
-/***/ 550:
+/***/ 558:
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(551);
+var content = __webpack_require__(559);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -479,7 +489,7 @@ if(false) {
 
 /***/ }),
 
-/***/ 551:
+/***/ 559:
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(2)(false);
@@ -496,5 +506,5 @@ exports.locals = {
 
 /***/ })
 
-},[145]);
+},[154]);
 //# sourceMappingURL=gui.js.map
